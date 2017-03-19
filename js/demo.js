@@ -70,7 +70,7 @@ $(function() {
         url: "json/list.json",
         async: true,
         dataType: "json",
-        type: "post",
+        type: "get",
         success: function(data) {
             if (data.rs == 1) {
             	//获取中奖结果
