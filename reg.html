@@ -1,0 +1,101 @@
+<html>
+ <head>
+ <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, minimal-ui" />
+  <link href="images/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon"/>
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-touch-fullscreen" content="yes" />
+  <meta name="apple-itunes-app" content="app-id=975971537" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  <meta name="format-detection" content="telephone=no" />
+  <title>app</title>
+
+  <link href="css/36.css" rel="stylesheet" type="text/css" />
+
+ </head>
+ <body>
+ <div ui-view="" class="ng-scope"><div class="form common-form common-wide-form ng-scope" ng-class="{'success-pages-guide': regType=='success'}">
+    <legend>
+        <!-- ngIf: bindType!='bind' --><h2 ng-if="bindType!='bind'" class="ng-scope">注册账号，让创业更简单</h2><!-- end ngIf: bindType!='bind' -->
+
+        <!-- ngIf: bindType=='bind' -->
+    </legend>
+
+    <!--如果是绑定第三方账号出现-->
+    <!-- ngIf: bindType=='bind' -->
+    <!-- ngIf: bindType!='bind' && regType!='success' --><div class="bind-entry ng-scope" ng-if="bindType!='bind' &amp;&amp; regType!='success'">
+        <a href="login.html">使用已有账号登录</a>
+    </div><!-- end ngIf: bindType!='bind' && regType!='success' -->
+
+
+    <!--通过手机号注册-->
+    <!--<div class="phone">-->
+    <!-- ngIf: regType=='phone' --><div class="phone ng-scope" ng-if="regType=='phone'">
+        <form action="" method="post" role="form" name="RegisterForm" ng-submit="submitRegForm($event)" class="ng-pristine ng-invalid ng-invalid-required ng-valid-pattern ng-valid-minlength ng-valid-maxlength ng-valid-compare-to">
+            <!-- ngIf: remoteError -->
+
+            <!-- ngIf: countryDict.length --><div class="form-group ng-scope" ng-if="countryDict.length">
+                <select name="cc" ng-model="formData.cc" class="form-control ng-pristine ng-untouched ng-valid" ng-change="changeCountry(RegisterForm.username)" ng-options="item as (item.desc+' (+'+item.cc+')') for item in countryDict"><option value="0" selected="selected" label="中国大陆 (+86)">中国大陆 (+86)</option><option value="1" label="香港 (+852)">香港 (+852)</option><option value="2" label="澳门 (+853)">澳门 (+853)</option><option value="3" label="台湾 (+886)">台湾 (+886)</option><option value="4" label="马来西亚 (+60)">马来西亚 (+60)</option><option value="5" label="菲律宾 (+63)">菲律宾 (+63)</option><option value="6" label="新加坡 (+65)">新加坡 (+65)</option><option value="7" label="泰国 (+66)">泰国 (+66)</option><option value="8" label="日本 (+81)">日本 (+81)</option><option value="9" label="韩国 (+82)">韩国 (+82)</option><option value="10" label="印度 (+91)">印度 (+91)</option><option value="11" label="俄罗斯 (+7)">俄罗斯 (+7)</option><option value="12" label="希腊 (+30)">希腊 (+30)</option><option value="13" label="荷兰 (+31)">荷兰 (+31)</option><option value="14" label="西班牙 (+34)">西班牙 (+34)</option><option value="15" label="瑞士 (+41)">瑞士 (+41)</option><option value="16" label="丹麦 (+45)">丹麦 (+45)</option><option value="17" label="瑞典 (+46)">瑞典 (+46)</option><option value="18" label="挪威 (+47)">挪威 (+47)</option><option value="19" label="葡萄牙 (+351)">葡萄牙 (+351)</option><option value="20" label="澳大利亚 (+61)">澳大利亚 (+61)</option><option value="21" label="新西兰 (+64)">新西兰 (+64)</option><option value="22" label="美国 (+1)">美国 (+1)</option><option value="23" label="加拿大 (+1)">加拿大 (+1)</option><option value="24" label="英国 (+44)">英国 (+44)</option><option value="25" label="德国 (+49)">德国 (+49)</option><option value="26" label="意大利 (+39)">意大利 (+39)</option><option value="27" label="法国 (+33)">法国 (+33)</option><option value="28" label="墨西哥 (+52)">墨西哥 (+52)</option><option value="29" label="阿根廷 (+54)">阿根廷 (+54)</option><option value="30" label="巴西 (+55)">巴西 (+55)</option></select>
+            </div><!-- end ngIf: countryDict.length -->
+
+            <div class="form-group">
+                <label class="icon-phone"></label>
+                <input type="tel" class="form-control ng-pristine ng-untouched ng-invalid ng-invalid-required ng-valid-pattern" name="username" ng-model="formData.username" placeholder="手机号" required="" ng-pattern="/^\d+$/">
+
+                <!-- ngIf: RegisterForm.username.$invalid && RegisterForm.username.$dirty && !RegisterForm.username.$error.checkaccount -->
+            </div>
+
+            <div class="form-group">
+                <label class="icon-lock"></label>
+                <input type="password" minlength="6" maxlength="16" class="form-control ng-pristine ng-untouched ng-invalid ng-invalid-required ng-valid-minlength ng-valid-maxlength" name="password" ng-model="formData.password" required="" placeholder="密码">
+
+                <!-- ngIf: RegisterForm.password.$invalid && RegisterForm.password.$dirty -->
+            </div>
+
+            <div class="form-group">
+                <label class="icon-lock"></label>
+                <input type="password" class="form-control ng-pristine ng-untouched ng-valid ng-isolate-scope ng-valid-compare-to" name="passwordConfirm" ng-model="formData.passwordConfirm" compare-to="formData.password" placeholder="确认密码">
+
+                <!-- ngIf: RegisterForm.passwordConfirm.$invalid && RegisterForm.passwordConfirm.$dirty -->
+            </div>
+            <div class="form-group">
+                <label class="icon-eye"></label>
+
+                <!-- ngIf: countLeft<=0 || !countLeft --><div class="actions col-actions ng-scope" ng-if="countLeft<=0 || !countLeft">
+                    <a href="javascript:void(0)" class="btn" title="短信" ng-disabled="RegisterForm.username.$invalid" ng-click="RegisterForm.username.$invalid || sendSMS()" disabled="disabled">发送验证码</a>
+
+
+                    <!--<span class="bubble">-->
+                        <!--推荐使用<br>语音验证-->
+                    <!--</span>-->
+                </div><!-- end ngIf: countLeft<=0 || !countLeft -->
+                <!-- ngIf: countLeft>0 -->
+
+                <div class="col-input">
+                    <input type="text" class="form-control col-8 ng-pristine ng-untouched ng-invalid ng-invalid-required" name="verifyCode" ng-model="formData.verifyCode" id="" placeholder="验证码" required="">
+                    <a href="javascript:void(0)" class="txt" title="电话" ng-class="{'disabled' : formData.cc.cc!='86'}" ng-disabled="RegisterForm.username.$invalid || formData.cc.cc!='86'" ng-click="RegisterForm.username.$invalid || formData.cc.cc!='86' || sendPhoneCall()" disabled="disabled">短信收不到? 尝试语音验证码</a>
+                </div>
+
+
+            </div>
+
+            <button type="button" ng-click="submitRegForm($event)" class="btn btn-primary">注册账号</button>
+            <div class="form-group">
+                <a href="javascript:void(0)" ng-click="changeRegType('email')" class="left">使用邮箱注册</a>
+                <a href="http://help.36kr.com/passport.html#tab1-1" target="_blank" class="right">我为何收不到验证码</a>
+            </div>
+        </form>
+    </div><!-- end ngIf: regType=='phone' -->
+
+    <!--通过邮箱注册-->
+    <!--<div class="email">-->
+    <!-- ngIf: regType=='email' -->
+
+    <!--注册成功-->
+    <!--<div class="success">-->
+    <!-- <div class="success" ng-if="regType=='success'"> -->
+    <!-- ngIf: regType=='success' -->
+</div>
+</div>
+ </body>
+</html>
