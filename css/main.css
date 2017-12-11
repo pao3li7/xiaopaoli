@@ -1,0 +1,64 @@
+.pane, .view {
+	overflow: auto;
+}
+
+.tab-nav.tabs {
+	height: 55px;
+	line-height: 22px;
+}
+
+.channel-news {
+	margin-bottom: 55px;
+}
+
+.login-check>a {
+	color: #c83232;
+    font-size: .3rem !important;
+    float: right;
+}
+
+.index-label {
+	display: inline-block;
+	padding: 0;
+	margin: 0;
+	background: #fff;
+	border: 1px solid #ccc;
+	border-top-right-radius: 10px;
+	border-top-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+	border-bottom-left-radius: 10px;
+}
+
+.index-label>span {
+	width: 60px;
+	display: inline-block;
+	float: left;
+	text-align: center;
+	cursor: pointer;
+	margin: 1px;
+	margin-right: 0;
+}
+
+.index-label>span:last-child {
+	margin-right: 1px;	
+}
+
+.index-label>span.active {
+	color: #fff;
+	border: 1px solid #009bf5;
+	background-color: #009bf5;
+	border-top-right-radius: 10px;
+	border-top-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+	border-bottom-left-radius: 10px;
+}
+
+.header .logo-wrapper[data-v-662bf35a] {
+	text-align: center;
+    margin: 0 auto;
+    width: 186px;
+}
+
+.hidden {
+	display: none !important;
+}
