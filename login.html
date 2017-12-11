@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+   <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, minimal-ui" />
+  <link href="images/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon"/>
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-touch-fullscreen" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  <meta name="format-detection" content="telephone=no" />
+  <link rel="stylesheet" href="css/login.css" type="text/css" />
+  <link rel="stylesheet" href="css/main.css" type="text/css" />
+  <title>app</title>
+ </head>
+ <body>
+  <div class="header">
+   <div target="#login-page" class="tab active bottom-1px">
+    手机号快捷登录
+   </div>
+   <div target="#register-page" class="tab bottom-1px">
+    账号密码登录
+   </div>
+  </div>
+  <div id="tip"> 
+   <div class="img"></div>
+   <p class="error-msg"></p>
+  </div>
+  <div class="image-verification-dialog dialog">
+   <div class="dialog-body">
+    <h3 class="dialog-title">请输入图片验证码</h3>
+    <div class="dialog-content">
+     <p class="error-msg"></p>
+     <div class="input-wrapper border-1px">
+      <input type="text" placeholder="请输入图片验证码" class="captcha" />
+     </div>
+     <div class="image-verification border-1px">
+      <img />
+     </div>
+    </div>
+    <div class="dialog-footer">
+     <button type="button" class="ok">提交</button>
+     <button type="button" class="cancel">取消</button>
+    </div>
+   </div>
+  </div>
+  <div id="quick-login-page" class="page active">
+   <form id="quick-login-form">
+    <div class="input-area border-1px">
+     <div class="input-wrapper bottom-1px border-1px">
+      <input type="tel" placeholder="请输入手机号" class="tel clearable-input" />
+      <button type="button" class="clear-input"></button>
+     </div>
+     <div class="input-wrapper border-1px">
+      <input type="tel" placeholder="请输入验证码" class="phone-verification-code" />
+      <button type="button" class="btn-get-verification-code">获取验证码</button>
+     </div>
+    </div>
+    <p class="error-msg"></p>
+    <div class="login-check">
+     <span class="login-icon login-unchecked"></span>
+     <span class="login-checked-text">我已阅读并同意<a>用户协议</a></span>
+     <a href="reg.html">立即注册</a>
+    </div>
+    <button type="submit" class="submit">登录</button>
+    <div class="submit-tip">
+     未注册手机验证后自动注册
+    </div>
+   </form>
+  </div>
+  <div id="login-page" class="page">
+   <form id="login-form">
+    <div class="input-area border-1px">
+     <div class="input-wrapper bottom-1px border-1px">
+      <input type="text" placeholder="请输入手机号或邮箱" class="username clearable-input" />
+      <button type="button" class="clear-input"></button>
+     </div>
+     <div class="input-wrapper border-1px">
+      <input type="password" maxlength="16" placeholder="请输入密码" class="psw" />
+     </div>
+    </div>
+    <p class="error-msg"></p>
+    <div class="login-check">
+     <span class="login-icon login-unchecked"></span>
+     <span class="login-checked-text">我已阅读并同意<a>用户协议</a></span>
+     <a href="reg.html">立即注册</a>
+    </div>
+    <button type="submit" class="submit">登录</button>
+   </form>
+  </div>
+  <div class="third-party-login">
+   <div class="split-line top-1px"></div>
+   <h3 class="title">一键登录</h3>
+   <div class="third-party">
+    <a href="" class="img qq"></a>
+    <a href="" class="img weibo"></a>
+    <a href="" class="img mi"></a>
+   </div>
+  </div>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/login.js"></script>
+ </body>
+</html>
